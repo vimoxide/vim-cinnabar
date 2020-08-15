@@ -1,5 +1,7 @@
 <div align="center">
+  
 ![Preview](https://github.com/pushqrdx/dotfiles/raw/master/screenshots/vim.png)
+
 </div>
 
 ---
