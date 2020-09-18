@@ -50,7 +50,6 @@ let s:xgray5        = ['#4E4E4E', 239]
 let s:xgray6        = ['#585858', 240]
 
 "}}}
-
 " Setup Variables: {{{
 
 let s:none = ['NONE', 'NONE']
@@ -96,7 +95,6 @@ if !exists('g:cinnabar_dim_lisp_paren')
 endif
 
 " }}}
-
 " Setup Emphasis: {{{
 
 let s:bold = 'bold,'
@@ -125,7 +123,6 @@ if g:cinnabar_inverse == 0
 endif
 
 " }}}
-
 " Highlighting Function: {{{
 
 function! s:HL(group, fg, ...)
@@ -162,8 +159,7 @@ function! s:HL(group, fg, ...)
   execute join(l:histring, ' ')
 endfunction
 "}}}
-
-" cinnabar Hi Groups: {{{
+" Hi Groups: {{{
 
 " memoize common hi groups
 call s:HL('cinnabarWhite', s:white)
@@ -204,7 +200,6 @@ call s:HL('cinnabarXgray5', s:xgray5)
 call s:HL('cinnabarXgray6', s:xgray6)
 
 " }}}
-
 " Setup Terminal Colors For Neovim: {{{
 
 if has('nvim')
