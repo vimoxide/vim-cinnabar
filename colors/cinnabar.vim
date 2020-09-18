@@ -27,14 +27,14 @@ let s:green          = ['#5da602', 2]
 let s:yellow         = ['#cfad00', 3]
 let s:blue           = ['#417ab3', 4]
 let s:magenta        = ['#88658d', 5]
-let s:cyan           = ['#02aa91', 6]
+let s:cyan           = ['#09ad95', 6]
 let s:white          = ['#dbded8', 7]
 let s:bright_black   = ['#999b97', 8]
 let s:bright_red     = ['#f44135', 9]
 let s:bright_green   = ['#7cb934', 10]
-let s:bright_yellow  = ['#fcea60', 11]
-let s:bright_blue    = ['#83afd8', 12]
-let s:bright_magenta = ['#bc93b6', 13]
+let s:bright_yellow  = ['#f2c744', 11]
+let s:bright_blue    = ['#70b0c2', 12]
+let s:bright_magenta = ['#be93b8', 13]
 let s:bright_cyan    = ['#38e7be', 14]
 let s:bright_white   = ['#f1f1ef', 15]
 
@@ -48,6 +48,7 @@ let s:xgray3        = ['#3A3A3A', 237]
 let s:xgray4        = ['#444444', 238]
 let s:xgray5        = ['#4E4E4E', 239]
 let s:xgray6        = ['#585858', 240]
+let s:xgray7        = ['#808080', 250]
 
 "}}}
 " Setup Variables: {{{
@@ -88,10 +89,6 @@ endif
 
 if !exists('g:cinnabar_inverse_match_paren')
   let g:cinnabar_inverse_match_paren=0
-endif
-
-if !exists('g:cinnabar_dim_lisp_paren')
-  let g:cinnabar_dim_lisp_paren=0
 endif
 
 " }}}
@@ -361,20 +358,20 @@ hi! link WarningMsg cinnabarRedBold
 " Gutter: {{{
 
 " Line number for :number and :# commands
-call s:HL('LineNr', s:bright_black)
+call s:HL('LineNr', s:xgray5)
 
 if g:cinnabar_transparent_background == 1 && !has('gui_running')
   " Column where signs are displayed
   " TODO Possibly need to fix  SignColumn
   call s:HL('SignColumn', s:none, s:none)
   " Line used for closed folds
-  call s:HL('Folded', s:bright_black, s:none, s:italic)
+  call s:HL('Folded', s:xgray5, s:none, s:italic)
   " Column where folds are displayed
   call s:HL('FoldColumn', s:bright_black, s:none)
 else
   call s:HL('SignColumn', s:none, s:black)
-  call s:HL('Folded', s:bright_black, s:black, s:italic)
-  call s:HL('FoldColumn', s:bright_black, s:black)
+  call s:HL('Folded', s:xgray5, s:black, s:italic)
+  call s:HL('FoldColumn', s:xgray5, s:black)
 endif
 
 " }}}
@@ -394,7 +391,7 @@ hi! link lCursor Cursor
 
 hi! link Special cinnabarOrange
 
-call s:HL('Comment', s:bright_black, s:none, s:italic)
+call s:HL('Comment', s:xgray7, s:none, s:italic)
 
 if g:cinnabar_transparent_background == 1 && !has('gui_running')
   call s:HL('Todo', s:bright_white, s:none, s:bold . s:italic)
@@ -418,14 +415,14 @@ hi! link Label cinnabarRed
 " try, catch, throw
 hi! link Exception cinnabarRed
 " sizeof, "+", "*", etc.
-hi! link Operator Normal
+hi! link Operator cinnabarBrightYellow
 " Any other keyword
 hi! link Keyword cinnabarRed
 
 " Variable name
-hi! link Identifier cinnabarCyan
+hi! link Identifier Normal
 " Function name
-hi! link Function cinnabarYellow
+hi! link Function cinnabarCyan
 
 " Generic preprocessor
 hi! link PreProc cinnabarCyan
@@ -458,11 +455,8 @@ hi! link Structure cinnabarCyan
 " typedef
 hi! link Typedef cinnabarMagenta
 
-if g:cinnabar_dim_lisp_paren == 1
-  hi! link Delimiter cinnabarXgray6
-else
-  hi! link Delimiter cinnabarBrightBlack
-endif
+" punctuation
+hi! link Delimiter cinnabarBrightWhite
 
 " }}}
 " Completion Menu: {{{
@@ -705,14 +699,6 @@ hi! link vimContinue cinnabarBrightWhite
 
 " }}}
 " Lisp dialects: {{{
-if g:cinnabar_dim_lisp_paren == 1
-  hi! link schemeParentheses cinnabarXgray6
-  hi! link clojureParen cinnabarXgray6
-else
-  hi! link schemeParentheses cinnabarBrightBlack
-  hi! link clojureParen cinnabarBrightBlack
-endif
-
 hi! link clojureKeyword cinnabarBlue
 hi! link clojureCond cinnabarRed
 hi! link clojureSpecial cinnabarRed
