@@ -270,12 +270,12 @@ if v:version >= 700
 
   if g:cinnabar_transparent_background == 1 && !has('gui_running')
     " Tab pages line filler
-    call s:HL('TabLineFill', s:green, s:none)
+    call s:HL('TabLineFill', s:white, s:none)
     " Active tab page label
-    call s:HL('TabLineSel', s:red, s:none, s:bold)
+    call s:HL('TabLineSel', s:green, s:none, s:bold)
   else
-    call s:HL('TabLineFill', s:green, s:black)
-    call s:HL('TabLineSel', s:red, s:black, s:bold)
+    call s:HL('TabLineFill', s:white, s:black)
+    call s:HL('TabLineSel', s:green, s:black, s:bold)
   endif
 
   " Not active tab page label
