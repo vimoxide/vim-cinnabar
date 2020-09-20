@@ -3,35 +3,36 @@
 
 " Color Palette {{{
 
-let s:black          = [ '#1c1b19',   0 ]
-let s:red            = [ '#ef2f27',   1 ]
-let s:green          = [ '#519f50',   2 ]
-let s:yellow         = [ '#fbb829',   3 ]
-let s:blue           = [ '#2c78bf',   4 ]
-let s:magenta        = [ '#e02c6d',   5 ]
-let s:cyan           = [ '#0aaeb3',   6 ]
-let s:white          = [ '#d0bfa1',   7 ]
-let s:bright_black   = [ '#918175',   8 ]
-let s:bright_red     = [ '#f75341',   9 ]
-let s:bright_green   = [ '#98bc37',  10 ]
-let s:bright_yellow  = [ '#fed06e',  11 ]
-let s:bright_blue    = [ '#68a8e4',  12 ]
-let s:bright_magenta = [ '#ff5c8f',  13 ]
-let s:bright_cyan    = [ '#53fde9',  14 ]
-let s:bright_white   = [ '#fce8c3',  15 ]
+let s:black          = ['#000000', 0]
+let s:red            = ['#e04128', 1]
+let s:green          = ['#5da602', 2]
+let s:yellow         = ['#cfad00', 3]
+let s:blue           = ['#417ab3', 4]
+let s:magenta        = ['#88658d', 5]
+let s:cyan           = ['#09ad95', 6]
+let s:white          = ['#dbded8', 7]
+let s:bright_black   = ['#999b97', 8]
+let s:bright_red     = ['#f44135', 9]
+let s:bright_green   = ['#7cb934', 10]
+let s:bright_yellow  = ['#f2c744', 11]
+let s:bright_blue    = ['#70b0c2', 12]
+let s:bright_magenta = ['#be93b8', 13]
+let s:bright_cyan    = ['#38e7be', 14]
+let s:bright_white   = ['#f1f1ef', 15]
 
-" xterm Colors
-let s:orange         = [ '#d75f00', 166 ]
-let s:bright_orange  = [ '#ff8700', 208 ]
-let s:hard_black     = [ '#121212', 233 ]
-let s:xgray1         = [ '#262626', 235 ]
-let s:xgray2         = [ '#303030', 236 ]
-let s:xgray3         = [ '#3a3a3a', 237 ]
-let s:xgray4         = [ '#444444', 238 ]
-let s:xgray5         = [ '#4e4e4e', 239 ]
-let s:xgray6         = [ '#585858', 240 ]
+" xterm colors.
+let s:orange        = ['#FF5F00', 202]
+let s:bright_orange = ['#FF8700', 208]
+let s:hard_black    = ['#121212', 233]
+let s:xgray1        = ['#262626', 235]
+let s:xgray2        = ['#303030', 236]
+let s:xgray3        = ['#3A3A3A', 237]
+let s:xgray4        = ['#444444', 238]
+let s:xgray5        = ['#4E4E4E', 239]
+let s:xgray6        = ['#585858', 240]
+let s:xgray7        = ['#808080', 250]
 
-" }}}
+"}}}
 
 
 " Theme Initializing {{{
