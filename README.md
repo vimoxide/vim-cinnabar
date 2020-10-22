@@ -1,6 +1,6 @@
 <div align="center">
   
-![Preview](https://github.com/pushqrdx/dotfiles/raw/master/screenshots/vim.png)
+![Preview](https://github.com/isaiahfisher/vim-cinnabar-defined/blob/master/image.png)
 
 </div>
 
