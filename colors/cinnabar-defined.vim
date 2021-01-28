@@ -687,7 +687,7 @@ hi! link xmlEntityPunct cinnabarYellow
 " }}}
 " Vim: {{{
 
-call s:HL('vimCommentTitle', s:bright_white, s:none, s:bold . s:italic)
+call s:HL('vimCommentTitle', s:bright_white, s:none, s:bold . s:none)
 
 hi! link vimNotation cinnabarYellow
 hi! link vimBracket cinnabarYellow
