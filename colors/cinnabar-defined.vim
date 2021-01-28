@@ -391,7 +391,7 @@ hi! link lCursor Cursor
 
 hi! link Special cinnabarOrange
 
-call s:HL('Comment', s:xgray7, s:none, s:italic)
+call s:HL('Comment', s:xgray7, s:none, s:none)
 
 if g:cinnabar_transparent_background == 1 && !has('gui_running')
   call s:HL('Todo', s:bright_white, s:none, s:bold . s:italic)
