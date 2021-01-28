@@ -391,7 +391,7 @@ hi! link lCursor Cursor
 
 hi! link Special cinnabarOrange
 
-call s:HL('Comment', s:xgray7, s:none, s:none)
+call s:HL('Comment', s:xgray7, s:none, '')
 
 if g:cinnabar_transparent_background == 1 && !has('gui_running')
   call s:HL('Todo', s:bright_white, s:none, s:bold . s:italic)
@@ -687,7 +687,7 @@ hi! link xmlEntityPunct cinnabarYellow
 " }}}
 " Vim: {{{
 
-call s:HL('vimCommentTitle', s:bright_white, s:none, s:bold . s:none)
+call s:HL('vimCommentTitle', s:bright_white, s:none, s:bold . '')
 
 hi! link vimNotation cinnabarYellow
 hi! link vimBracket cinnabarYellow
