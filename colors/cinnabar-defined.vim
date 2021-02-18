@@ -1,4 +1,4 @@
-" 'cinnabar.vim' -- Vim color scheme.
+" 'cinnabar-defined.vim' -- Vim color scheme.
 " Maintainer: pushqrdx (pushqrdx@gmail.com)
 " Original Source: https://github.com/srcery-colors/srcery-vim
 
@@ -13,7 +13,7 @@ if v:version > 580
   endif
 endif
 
-let g:colors_name='cinnabar'
+let g:colors_name='cinnabar-defined'
 
 if !has('gui_running') && &t_Co != 256
   finish
@@ -326,14 +326,14 @@ call s:HL('StatusLineTerm',   s:bright_white, s:black)
 if g:cinnabar_transparent_background == 1 && !has('gui_running')
   call s:HL('StatusLineNC', s:black, s:black)
   call s:HL('StatusLineTermNC', s:black, s:black)
-  call s:HL('VertSplit', s:black, s:black)
+  call s:HL('VertSplit', s:hard_black, s:hard_black)
   " Current match in wildmenu completion
   call s:HL('WildMenu', s:blue, s:none, s:bold)
 else
   call s:HL('StatusLineNC', s:black, s:black)
   call s:HL('StatusLineTermNC', s:black, s:black)
   " call s:HL('VertSplit', s:bright_white, s:black)
-  call s:HL('VertSplit', s:black, s:black)
+  call s:HL('VertSplit', s:hard_black, s:hard_black)
   call s:HL('WildMenu', s:blue, s:black, s:bold)
 endif
 
@@ -391,7 +391,7 @@ hi! link lCursor Cursor
 
 hi! link Special cinnabarOrange
 
-call s:HL('Comment', s:xgray7, s:none, s:italic)
+call s:HL('Comment', s:xgray7, s:none, '')
 
 if g:cinnabar_transparent_background == 1 && !has('gui_running')
   call s:HL('Todo', s:bright_white, s:none, s:bold . s:italic)
@@ -687,7 +687,7 @@ hi! link xmlEntityPunct cinnabarYellow
 " }}}
 " Vim: {{{
 
-call s:HL('vimCommentTitle', s:bright_white, s:none, s:bold . s:italic)
+call s:HL('vimCommentTitle', s:bright_white, s:none, s:bold . '')
 
 hi! link vimNotation cinnabarYellow
 hi! link vimBracket cinnabarYellow

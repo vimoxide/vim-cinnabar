@@ -1,9 +1,9 @@
 <div align="center">
   
-![Preview](https://github.com/pushqrdx/dotfiles/raw/master/screenshots/vim.png)
+![Preview](https://github.com/isaiahfisher/vim-cinnabar-defined/blob/master/image.png)
 
 </div>
 
 ---
 
-> This theme uses [srcery](https://github.com/srcery-colors/srcery-vim) as a base, which uses parts of [gruvbox](https://github.com/morhetz/gruvbox), Huge thanks to the creators and maintainers of both
+> This is my fork of [vim-cinnabar](https://github.com/vimoxide/vim-cinnabar) all credit for the original theme goes to the author.
